@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+  color: #222;
+}
+
+.app {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px 0;
+}
+
+/* Header */
+
+header {
+  background: #123c69;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Current Readings */
+
+section h2 {
+  margin-bottom: 15px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card .icon {
+  font-size: 40px;
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+  color: #555;
+}
+
+.card p {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  color: #123c69;
+}
+
+.card span {
+  font-size: 18px;
+}
+
+/* Status */
+
+.status {
+  margin-top: 25px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  color: white;
+}
+
+.status.safe {
+  background: #198754;
+}
+
+.status.warning {
+  background: #f0ad00;
+}
+
+.status.danger {
+  background: #dc3545;
+}
+
+/* Button */
+
+.update-btn {
+  display: block;
+  margin: 25px auto;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #123c69;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background: #0b2948;
+}
+
+/* Alert History */
+
+.history {
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+th {
+  background: #123c69;
+  color: white;
+  padding: 15px;
+}
+
+td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.active {
+  background: #dc3545;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+}
+
+.resolved {
+  background: #198754;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #666;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .app {
+    width: 95%;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}
